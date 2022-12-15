@@ -1,0 +1,9 @@
+### DB connection params
+
+Create db_args.py in folder and specify your credentials:
+   ```python
+   DB_NAME = ...
+    DB_USER = ...
+    DB_PASS = ...
+    ALLOWED_HOSTS = [..., ...]
+   ```
