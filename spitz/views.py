@@ -4,12 +4,17 @@ from django.template import RequestContext
 from django.template.response import TemplateResponse
 from django.shortcuts import render
 from .models import *
-import random
+import pathlib
+from mysite.settings import BASE_DIR
 
-menu = [{"title": "Главная страница", "url_name": "home"},
-        {"title": "Виды Шпицев", "url_name": "types"},
-        {"title": "О сайте", "url_name": "about"},
-        {"title": "Войти", "url_name": "login"},
+f_robots = pathlib.Path(f'{BASE_DIR}/spitz/templates/robots.txt').read_text()
+f_sitemap = pathlib.Path(f'{BASE_DIR}/spitz/templates/sitemap.xml').read_text()
+
+menu = [
+    {"title": "Главная страница", "url_name": "home"},
+    {"title": "Виды Шпицев", "url_name": "types"},
+    {"title": "О сайте", "url_name": "about"},
+    {"title": "Войти", "url_name": "login"},
 ]
 
 def handler404(request, *args, **argv):
@@ -61,3 +66,9 @@ def show_type(request, type_id):
         "spitz_type": spitz_type
     }
     return render(request, "spitztype.html", context=context)
+
+def robots(request):
+    return HttpResponse(f_robots, content_type="text/plain")
+
+def sitemaps(request):
+    return HttpResponse(f_sitemap, content_type="text/xml")
