@@ -1,15 +1,21 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <h1>{{title}}</h1>
 
 <ul>
     {% for type in types %}
-    <li>
+    <li style="margin-top: 50px;">
         <h2>{{type.title}}</h2>
-        <p>{{type.content|truncatewords:40}}</p>
+
+        <div style="display: flex; padding-top: 2%;">
+            <img src="{{type.photo}}" alt=""></img>
+            <p style="padding-left: 5%; padding-right: 5%;">{{type.content|truncatewords:40}}</p>
+        </div>
+
         <p class="link-read-post"><a href="{{type.get_absolute_url}}">Прочитать</a></p>
-        <hr>
+        <hr style="margin-top: 50px;">
     </li>
     {% endfor %}
 </ul>

@@ -1,3 +1,12 @@
+html * {
+    font-family: "Montserrat";
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
+}
+
 hr {
     height: 3px;
     border-color: #0094947c;
@@ -15,31 +24,31 @@ body {
     margin: 0;
 }
 
-.topnavigation {
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    justify-content: left;
-    display: flex;
-    background: #484863;
-    height: 20px;
-    width: 100%;
-    padding: 20px 0;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-}
-
-.aligncenter {
-    text-align: center;
-}
-
 td {
     text-align: center;
 }
 
 h2 {
     color: #cd853f;
+}
+
+li {
+    list-style-type: none;
+}
+
+.topnavigation {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: #484863;
+    width: 100%;
+    padding: 20px 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.aligncenter {
+    text-align: center;
 }
 
 .topnavigation a {
@@ -64,18 +73,13 @@ h2 {
     text-align: justify;
 }
 
-li {
-    list-style-type: none;
-}
-
 .link-read-post{
     text-align: right;
 }
 
 .link-read-post a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin-right: 0.5%;
+    padding: 20px;
+    margin-right: 25px;
     text-decoration: none;
     background: #08164d;
     color: white;
@@ -86,34 +90,6 @@ li {
     background: #060f36;
 }
 
-main {
-    margin-left: 12.5%;
-}
-
-.sidenavigation {
-    height: 100%;
-    width: 12%; 
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #1d1d29 ;
-    overflow-x: hidden; 
-    padding-top: 40px;
-    margin-top: 60px;
-}
-
-.sidenavigation a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    color: #818181;
-    display: block;
-}
-
-.sidenavigation a:hover {
-    color: #f1f1f1;
-}
-
 .foxman{
     padding-right: 80%;
     width: 100%;
@@ -121,4 +97,45 @@ main {
 
 .handler404 {
     display: flex;
+}
+
+.footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: #484863;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.fact_section {
+    border: 1px;
+    box-shadow: 10px 5px 5px gray;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: #717193; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.fact_section_title {
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+
+.fact_section_title h2 {
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
 }

@@ -1,4 +1,6 @@
 {% load static %}
+{% load custom_tags %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,25 +16,27 @@
 {% endfor %}
 {% endblock mainmenu%}
 </ul>
-<div class="sidenavigation">
-    
-        <a href="{% url 'home' %}">Все виды</a>
-
-
-    {% for t in types %}
-        {% if t.pk == type_selected %}
-            <p class="selected">{{t.title}}</p>
-        {% else %}
-            <p><a href="{{ t.get_absolute_url }}">{{t.title}}</a></p>
-        {% endif %}
-    {% endfor %}
-
-    <a href="{% static 'images/jumpFox.gif' %}"><img src="{% static 'images/Anton.png' %}" class="foxman"></a>
-</div>
 
 <main>
     {% block content%}
     {% endblock%}
 </main>
+
+{% random_fact as fact %}
+<div class="fact_section"> 
+    <div class="fact_section_title">
+        <img src="../static/images/facts_doggy.png" style="width: 50px;">
+        <h2>А вы знали, что ...</h2>
+        <img src="../static/images/facts_doggy.png" style="width: 50px;">
+    </div>
+    
+    
+    <p>{{ fact }} </p>
+</div>
+
+<div class="footer">
+    &copy; 2022 <span> SpitzHome. All rights reserved.</span>
+</div>
+
 </body>
 </html>

@@ -11,7 +11,7 @@ f_robots = pathlib.Path(f'{BASE_DIR}/spitz/templates/robots.txt').read_text()
 f_sitemap = pathlib.Path(f'{BASE_DIR}/spitz/templates/sitemap.xml').read_text()
 
 menu = [
-    {"title": "Главная страница", "url_name": "home"},
+    {"title": "SpitzHome", "url_name": "home"},
     {"title": "Виды Шпицев", "url_name": "types"},
     {"title": "О сайте", "url_name": "about"},
     {"title": "Войти", "url_name": "login"},
@@ -30,7 +30,7 @@ def index(request):
         "type_selected": 0,
         "spitz": spitz,
         "menu": menu,
-        "title": "Главная страница"
+        "title": "Добро пожаловать в SpitzHome"
     }
     return render(request, "index.html", context=context)
 
