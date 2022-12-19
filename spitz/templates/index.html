@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{title}}</h1>
+<!-- <h1>{{title}}</h1>-->
 
 
 <!--
@@ -18,8 +18,42 @@
 -->
 
 <div class="index_about">
-    <p>AMONGUS</p>
+    <div class="index_about_pic">
+        <h1 style="font-size: 56px; color: white;">{{title}}</h1>
+        <h2>"Чем больше я узнаю людей, тем больше люблю собак."</h2>
+        <p>Мадам де Севинье</p>
+    </div>
 </div>
+
+<div class="index_content">
+    <h2>На нашем сайте вы можете узнать</h2>
+
+    <ul style="display: flex; flex-direction: column;">
+        <div class="index_content_row">
+            <div class="checkmark"></div>
+            <li>Общее описание породы под названием "шпиц"</li>
+        </div>
+
+        <div class="index_content_row">
+            <div class="checkmark"></div>
+            <li>Детальное описание (забота, питание) для каждой породы шпицев</li>
+        </div>
+
+        <div class="index_content_row">
+            <div class="checkmark"></div>
+            <li>Общие рекомендации по уходу</li>
+        </div>
+
+        <div class="index_content_row">
+            <div class="checkmark"></div>
+            <li>Галерея питомцев</li>
+        </div>
+    </ul>
+
+    <div></div>
+
+</div>
+
 
 
 

@@ -5,6 +5,14 @@ html * {
 @font-face {
     font-family: "Montserrat";
     src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Montserrat Italic";
+    src: url(../fonts/Montserrat-ThinItalic.ttf) format("truetype");
+    font-weight: normal;
+    font-style: italic;
 }
 
 hr {
@@ -54,6 +62,7 @@ li {
 .topnavigation a {
     text-decoration: none;
     color: #cd853f;
+    font-weight: bold;
     padding-top: 20px;
     padding-bottom: 23px;
     padding-left: 8px;
@@ -118,8 +127,7 @@ li {
     box-shadow: 10px 5px 5px gray;
     width: 50%;
     margin-left: auto;
-    margin-right: auto;
-    
+    margin-right: auto;    
     margin-bottom: 25px;
     margin-top: 50px;
     padding: 25px; 
@@ -128,6 +136,7 @@ li {
     align-items: center;
     justify-content: center; 
     flex-direction: column;
+    color: white;
 }
 
 .fact_section_title {
@@ -137,7 +146,7 @@ li {
 }
 
 .fact_section_title h2 {
-    color: black;
+    color: white;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -159,15 +168,79 @@ li {
 }
 
 .index_about {
-    width: 100%;
+    margin-top: 50px;
+}
+
+.index_about_pic {
+    width: 1000px;
     height: 667px;
     display: flex;
-    align-items: center;
     justify-content: center;
+    flex-direction: column;
+
+    
+    margin: auto;
+    background-repeat: no-repeat;
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5), 
         rgba(0, 0, 0, 0.5)
       ), url(https://minichazer.s-ul.eu/PUIppVFU);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
+}
+
+.index_about_pic h2 {
+    font-family: "Monsterrat Italic";
+    font-size: xx-large;
+    color: #e0e0e0;
+    align-self: center;
+    padding-top: 35%;
+
+}
+
+.index_about_pic p {
+    color: #e0e0e0;
+    font-size: x-large;
+    align-self: flex-end;
+    padding-right: 7.5%;
+}
+
+.index_content {
+    border: 1px;
+    box-shadow: 10px 5px 5px gray;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-bottom: 25px;
+    margin-top: 50px;
+    padding: 25px; 
+    background-color: #717193; 
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+    flex-direction: column;
+}
+
+.index_content h2 {
+    color: white;
+    font-size: x-large;
+    padding-bottom: 25px;
+}
+
+.index_content_row {
+    color: white;
+    text-align: right;
+    font-size: large;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.checkmark {
+    display: inline-block;
+    transform: rotate(45deg);
+    height: 24px;
+    width: 12px;
+    border-bottom: 7px solid white;
+    border-right: 7px solid white;
 }
