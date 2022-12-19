@@ -7,6 +7,7 @@
     <meta charset="utf-8" />
     <title>{{ title }}</title>
     <link type="text/css" rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'images/favicon.png' %}">
 </head>
 <body>
 {% block mainmenu %}
@@ -25,9 +26,9 @@
 {% random_fact as fact %}
 <div class="fact_section"> 
     <div class="fact_section_title">
-        <img src="../static/images/facts_doggy.png" style="width: 50px;">
+        <img src="{% static 'images/facts_doggy.png' %}" style="width: 50px;">
         <h2>А вы знали, что ...</h2>
-        <img src="../static/images/facts_doggy.png" style="width: 50px;">
+        <img src="{% static 'images/facts_doggy.png' %}" style="width: 50px;">
     </div>
     
     
