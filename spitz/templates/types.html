@@ -4,19 +4,25 @@
 {% block content %}
 <h1>{{title}}</h1>
 
-<ul>
-    {% for type in types %}
-    <li style="margin-top: 50px;">
-        <h2>{{type.title}}</h2>
+<div class="types">
+    <ul>
+        {% for type in types %}
+        <li>
+            <h2>{{type.title}}</h2>
 
-        <div style="display: flex; padding-top: 2%;">
-            <img src="{{type.photo}}" alt=""></img>
-            <p style="padding-left: 5%; padding-right: 5%;">{{type.content|truncatewords:40}}</p>
-        </div>
 
-        <p class="link-read-post"><a href="{{type.get_absolute_url}}">Прочитать</a></p>
-        <hr style="margin-top: 50px;">
-    </li>
-    {% endfor %}
-</ul>
+            <div style="display: flex; padding-top: 2%;">
+                <img src="{{type.photo}}" alt="" style="width: 250px;"></img>
+                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <p style="padding-left: 5%; padding-right: 5%;">{{type.content|truncatewords:40}}</p>
+                    <p class="link-read-post"><a href="{{type.get_absolute_url}}">Прочитать</a></p>
+                </div>
+            </div>
+
+            
+            <!--<hr style="margin-top: 50px;"> -->
+        </li>
+        {% endfor %}
+    </ul> 
+</div>
 {% endblock %}

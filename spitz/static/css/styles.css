@@ -119,8 +119,10 @@ li {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    
     margin-bottom: 25px;
-    padding: 25px;
+    margin-top: 50px;
+    padding: 25px; 
     background-color: #717193; 
     display: flex; 
     align-items: center;
@@ -138,4 +140,34 @@ li {
     color: black;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.types ul {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+}
+
+.types li {
+    margin-top: 25px; 
+    margin-bottom: 25px;
+    width: 75%; 
+    border: 2 px; 
+    outline: 0.5rem solid #08164d; 
+    padding: 25px; 
+    box-shadow: 20px 15px 15px gray;
+}
+
+.index_about {
+    width: 100%;
+    height: 667px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5), 
+        rgba(0, 0, 0, 0.5)
+      ), url(https://minichazer.s-ul.eu/PUIppVFU);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
