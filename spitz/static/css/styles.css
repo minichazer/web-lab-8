@@ -57,6 +57,8 @@ li {
     justify-content: center;
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
     background: #484863;
     width: 100%;
     padding: 20px 0;
@@ -64,18 +66,11 @@ li {
     overflow: hidden;
 }
 
-.aligncenter {
-    text-align: center;
-}
-
 .topnavigation a {
     text-decoration: none;
     color: #cd853f;
     font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 23px;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 22px 8px;
 }
 
 .topnavigation a:hover {
@@ -87,17 +82,22 @@ li {
     padding-right: 50px;
 }
 
+.aligncenter {
+    text-align: center;
+}
+
 .alignjustify{
     text-align: justify;
 }
 
 .link-read-post{
+    font-size: 1.5vw;
     text-align: right;
 }
 
 .link-read-post a {
-    padding: 20px;
-    margin-right: 25px;
+    padding: 2.5%;
+    margin-right: 5%;
     text-decoration: none;
     background: #08164d;
     color: white;
@@ -152,9 +152,40 @@ li {
 }
 
 .fact_section_title h2 {
+    font-size: 2vw;
     color: white;
     padding-left: 10px;
     padding-right: 10px;
+}
+
+.types h2 {
+    font-size: 1.75vw;
+}
+
+.types_elem {
+    display: flex; 
+    padding-top: 2%;
+}
+
+.types_elem img {
+    width: 10vw; 
+    height: 10vw;
+}
+
+.types_elem_description {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+.types_elem_content {
+    padding-left: 5%; 
+    padding-right: 5%; 
+    font-size: 1.25vw;
+}
+
+.fact_section p {
+    font-size: 1vw;
 }
 
 .types ul {
@@ -178,8 +209,8 @@ li {
 }
 
 .index_about_pic {
-    width: 900px;
-    height: 667px;
+    width: 65vw;
+    height: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -187,15 +218,22 @@ li {
     
     margin: auto;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.6), 
         rgba(0, 0, 0, 0.6)
       ), url(https://minichazer.s-ul.eu/PUIppVFU);
 }
 
+.index_about_pic h1 {
+    font-size: 4vw; 
+    color: white
+}
+
 .index_about_pic h2 {
     font-family: "Monsterrat Italic";
-    font-size: xx-large;
+    font-size: 3.5vw;
     color: #e0e0e0;
     align-self: center;
     padding-top: 35%;
@@ -205,7 +243,7 @@ li {
 
 .index_about_pic p {
     color: #e0e0e0;
-    font-size: x-large;
+    font-size: 2.5vw;
     align-self: flex-end;
     padding-right: 7.5%;
 }
@@ -224,7 +262,7 @@ li {
 
 .index_content h2 {
     color: white;
-    font-size: x-large;
+    font-size: 2vw;
     padding-bottom: 45px;
     padding-top: 25px;
     text-align: center;
@@ -233,7 +271,7 @@ li {
 .index_content_row {
     color: white;
     text-align: right;
-    font-size: large;
+    font-size: 1.3vw;
     width: 85%;
     display: flex;
     justify-content: space-between;
@@ -247,8 +285,8 @@ li {
 .checkmark {
     display: inline-block;
     transform: rotate(45deg);
-    height: 24px;
-    width: 12px;
+    height: 2vw;
+    width: 1vw;
     border-bottom: 7px solid white;
     border-right: 7px solid white;
 }
@@ -256,7 +294,7 @@ li {
 .fade_line {
     height: 1px;
     background-color: #E6E6E6;
-    width: 50.0em;
+    width: 100vw;
     margin: 25px auto;
     background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, #dddddd), color-stop(0.5, #717193), color-stop(0.98, #dddddd));
 }
@@ -317,3 +355,4 @@ li {
     margin: 5%;
     font-size: 20px;
 }
+

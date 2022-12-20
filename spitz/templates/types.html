@@ -16,15 +16,13 @@
         {% for type in types %}
         <li>
             <h2>{{type.title}}</h2>
-
-            <div style="display: flex; padding-top: 2%;">
-                <img src="{{type.photo}}" alt="" style="width: 250px;"></img>
-                <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <p style="padding-left: 5%; padding-right: 5%; font-size: 20px;">{{type.content|truncatewords:40}}</p>
+            <div class="types_elem">
+                <img src="{{type.photo}}" alt="doggy"></img>
+                <div class="types_elem_description">
+                    <p class="types_elem_content">{{type.content|truncatewords:40}}</p>
                     <p class="link-read-post"><a href="{{type.get_absolute_url}}">Прочитать</a></p>
                 </div>
             </div>
-
         </li>
         {% endfor %}
     </ul> 
