@@ -25,13 +25,8 @@ html * {
     font-display: fallback;
 }
 
-hr {
-    height: 3px;
-    border-color: #0094947c;
-    background-color: #0094947c;
-}
-
 h1 {
+    font-size: 3vw;
     text-align: center;
     color: #cd853f;
 }
@@ -76,10 +71,6 @@ li {
 .topnavigation a:hover {
     color: #e0e0e0;
     background: #1d1d29;
-}
-
-.topnavigation li {
-    padding-right: 50px;
 }
 
 .aligncenter {
@@ -129,6 +120,11 @@ li {
     justify-content: center;
     align-items: center;
     gap: 0.2rem;
+    font-size: 2vw;
+}
+
+.footer span {
+    font-size: 2vw;
 }
 
 .fact_section {
@@ -145,6 +141,11 @@ li {
     color: white;
 }
 
+.fact_section p {
+    padding: 0 10px;
+    font-size: 1vw;
+}
+
 .fact_section_title {
     display: flex; 
     align-items: center;
@@ -158,6 +159,10 @@ li {
     padding-right: 10px;
 }
 
+.fact_section_title img {
+    width: 4vw;
+}
+
 .types h2 {
     font-size: 1.75vw;
 }
@@ -168,8 +173,8 @@ li {
 }
 
 .types_elem img {
-    width: 10vw; 
-    height: 10vw;
+    width: 14vw; 
+    height: 14vw;
 }
 
 .types_elem_description {
@@ -184,10 +189,6 @@ li {
     font-size: 1.25vw;
 }
 
-.fact_section p {
-    font-size: 1vw;
-}
-
 .types ul {
     display: flex; 
     flex-direction: column; 
@@ -198,18 +199,14 @@ li {
     margin-top: 25px; 
     margin-bottom: 25px;
     width: 75%; 
-    border: 2 px; 
+    border: 2px; 
     outline: 0.5rem solid #08164d; 
     padding: 25px; 
     box-shadow: 20px 15px 15px gray;
 }
 
-.index_about {
-    margin-top: 50px;
-}
-
 .index_about_pic {
-    width: 65vw;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
@@ -219,7 +216,7 @@ li {
     margin: auto;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-position:50%;
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.6), 
         rgba(0, 0, 0, 0.6)
@@ -251,7 +248,7 @@ li {
 .index_content {
     border: 1px;
     box-shadow: 10px 5px 5px gray;
-    width: 50%;
+    width: 53.75vw;
     margin: 25px auto; 
     background-color: #717193; 
     display: flex; 
@@ -310,7 +307,7 @@ li {
     color: black;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 32px;
+    font-size: 3vw;
 }
 
 .pet-me2 {
@@ -318,11 +315,26 @@ li {
     color: black;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
-    font-size: 32px;
+    font-size: 3vw;
+}
+
+.pet-me3 {
+    color: black;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.25vw;
+}
+
+.pet-me4 {
+    display: none;
+    color: black;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.25vw;
 }
 
 .annoying-dog {
-    width: 200px;
+    width: 20vw;
     margin: auto;
 }
 
@@ -331,10 +343,6 @@ li {
     -webkit-animation-duration: 0.7s;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-timing-function: linear;
-}
-
-.annoying-dog:hover::before {
-    content: "MEOW?";
 }
 
 @keyframes vibrate {
@@ -353,6 +361,94 @@ li {
 
 .spitztype_maincontent {
     margin: 5%;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
 
+.spitztype_img {
+    width: 75%;
+}
+
+@media only screen and (max-width: 800px){
+    /* base.html */
+    h1 {
+        font-size: 7vw;
+    }
+    .fact_section {
+        width: 70%;
+    }
+    .fact_section p {
+        font-size: 3.5vw;
+    }
+    .fact_section_title h2 {
+        font-size: 4vw;
+    }
+    .fact_section_title img {
+        width: 8vw;
+    }
+    .footer {
+        font-size: 2vw;
+    }
+
+
+    /* index.html */
+    .index_about_pic {
+        width: 100%;
+        background-position: 50%;
+    }
+    .index_content {
+        width: 75vw;
+    }
+    .index_content h2 {
+        font-size: 5vw;
+    }
+    .index_content li {
+        font-size: 3.5vw;
+    }
+
+
+    /* /types */
+    .types_elem_content {
+        font-size: 2.25vw;
+    }
+    .types h2 {
+        font-size: 3.25vw;
+    }
+    .link-read-post a {
+        font-size: 2.25vw;
+        padding: 2vw;
+    }
+    .types_elem img {
+        width: 18vw;
+        height: 18vw;
+    }
+
+
+    /* type.html */
+    .spitztype_img {
+        width: 75%;
+    }
+    .spitztype_maincontent {
+        font-size: 2.5vw;
+        padding: 0 5%;
+    }
+
+
+    /* about.html */
+    .pet-me {
+        font-size: 6vw;
+    }
+    .pet-me2 {
+        font-size: 6vw;
+    }
+    .pet-me3 {
+        font-size: 3vw;
+    }
+    .pet-me4 {
+        font-size: 3vw;
+    }
+    .annoying-dog {
+        width: 30vw;
+    }
+
+    /* 404.html */
+}
