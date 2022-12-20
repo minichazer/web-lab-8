@@ -1,8 +1,26 @@
 {% extends "base.html" %}
 {% load static %}
+{% load custom_tags %}
+
+{% block head %}
+    <meta name="description" content="{{title|format_tags}}"/>
+{% endblock %}
 
 {% block content %}
 <h1>{{title}}</h1>
 
-<p>{{spitz_type.content}}</p>
+<div class="fade_line"></div> 
+
+<div style="display: flex; justify-content: center;">
+    <img src="{{spitz_type.photo}}" alt=""></img>
+</div>
+
+
+
+<div class="spitztype_maincontent">
+    <p>{{spitz_type.content}}</p>
+</div>
+
+<div class="fade_line"></div> 
+
 {% endblock %}

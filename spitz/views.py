@@ -30,7 +30,7 @@ def index(request):
         "type_selected": 0,
         "spitz": spitz,
         "menu": menu,
-        "title": "Добро пожаловать в SpitzHome"
+        "title": "SpitzHome"
     }
     return render(request, "index.html", context=context)
 

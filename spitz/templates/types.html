@@ -2,7 +2,14 @@
 {% load static %}
 
 {% block content %}
+
+<head>
+    <meta name="description" content="На этой странице представлены все виды шпицев и их краткое описание. Более {{ types|length }} собак!"/>
+</head>
+
 <h1>{{title}}</h1>
+
+<div class="fade_line"></div> 
 
 <div class="types">
     <ul>
@@ -10,17 +17,14 @@
         <li>
             <h2>{{type.title}}</h2>
 
-
             <div style="display: flex; padding-top: 2%;">
                 <img src="{{type.photo}}" alt="" style="width: 250px;"></img>
                 <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                    <p style="padding-left: 5%; padding-right: 5%;">{{type.content|truncatewords:40}}</p>
+                    <p style="padding-left: 5%; padding-right: 5%; font-size: 20px;">{{type.content|truncatewords:40}}</p>
                     <p class="link-read-post"><a href="{{type.get_absolute_url}}">Прочитать</a></p>
                 </div>
             </div>
 
-            
-            <!--<hr style="margin-top: 50px;"> -->
         </li>
         {% endfor %}
     </ul> 

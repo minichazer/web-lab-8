@@ -1,15 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block head %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <meta name="description" content="На этой странице вы найдёте авторов проекта, а также небольшую отсылку к игре Undertale и всеми любимой (или нет) Надоедливой собаке."/>  
+{% endblock %}
+
+
 {% block content %}
-<!--<h1>{{title}}</h1>-->
-
-<head>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
-</head>
-
 <body>
-    <!--$(document).ready(function() {});-->
     <div class="doggy_place">
         <p class="pet-me">Pet Me</p>
         <p class="pet-me2">BARK BARK BARK</p>
@@ -17,10 +16,5 @@
         <audio loop src="{% static 'mp3/annoyingDog.mp3' %}" preload="auto"></audio>
         <script src="{% static '/js/annoyingDog.js' %}"></script>
     </div>
-
 </body>
-
-
-
-
 {% endblock %}

@@ -2,3 +2,30 @@ User-agent: *
 Disallow:/
 Crawl-delay: 5
 Disallow: /cgi-bin/
+Sitemap: 213d-178-72-78-131.ngrok.io/sitemap.xml
+
+User-agent: Yandex
+Disallow: /cgi-bin
+Disallow: */css
+Disallow: /images/
+Disallow: /admin/
+Host: 213d-178-72-78-131.ngrok.io
+
+User-agent: Googlebot
+Disallow: /cgi-bin
+Disallow: /images/
+Disallow: /admin/
+Allow: *.css
+Host: 213d-178-72-78-131.ngrok.io
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: StackRambler
+Disallow: /
+
+User-agent: Yahoo-MMCrawler
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /

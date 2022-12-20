@@ -8,6 +8,12 @@ def random_image(lst):
     lst = list(lst.split(','))
     return random.choice(lst)
 
+@register.filter
+def format_tags(tags):
+    tags = tags.replace(" или", "").replace("(", "").replace(")", "").split()
+    tags = list(dict.fromkeys(tags))
+    return ", ".join(tags)
+
 @register.simple_tag
 def random_fact():
     lst = [

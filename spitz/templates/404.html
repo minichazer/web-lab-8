@@ -1,21 +1,21 @@
 {% load static %}
 {% load custom_tags %}
 
-
-<body style="background-color: #736f72; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-
+<body style="background-color: #ffffff; display: flex; flex-direction: column; justify-content: center; align-items: center;">
     {% block content %}
     <div class="handler404">
-        <p style="text-align: center; font-size: large;">Опа, а вы в курсе, что вы потерялись?</p>
-        <p style="text-align: center; font-size: large;">Нажмите на лису и она поможет найти выход...</p>
-        
-        {% with "images/404-1.gif,images/404-2.gif,images/404-3.gif"|random_image as rand_gif %}
+        <p style="text-align: center; font-size: 72px; margin: 25px auto;">404</p>
         <a href="{% url 'home' %}">
-            <img src="{% static rand_gif %}" alt="фырк">
+            <img src="https://i.imgur.com/VBsGJoV.png" alt="фырк">
         </a>
-        {% endwith %}
+        <p style="text-align: center; font-size: 36px;">Ой, кажется вы потерялись...?</p>
+        <p style="text-align: center; font-size: 36px;">Нажмите на лису и она поможет найти выход.</p>
 
+        <a href="{% static 'images/404-2.gif' %}">
+            <p style="text-align: center;">секрет</p>
+        </a>
+        <!-- {% with "images/404-1.gif,images/404-2.gif,images/404-3.gif"|random_image as rand_gif %}
+        {% endwith %}-->
     </div>
     {% endblock %}
-
 </body>

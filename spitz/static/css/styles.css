@@ -6,7 +6,6 @@
     user-select: none;
 }
 
-
 html * {
     font-family: "Montserrat";
 }
@@ -15,6 +14,7 @@ html * {
     font-family: "Montserrat";
     src: url(../fonts/Montserrat-Regular.ttf) format("truetype");
     font-weight: normal;
+    font-display: fallback;
 }
 
 @font-face {
@@ -22,6 +22,7 @@ html * {
     src: url(../fonts/Montserrat-ThinItalic.ttf) format("truetype");
     font-weight: normal;
     font-style: italic;
+    font-display: fallback;
 }
 
 hr {
@@ -37,7 +38,6 @@ h1 {
 
 body {
     background: #dddddd;
-    font-family: 'Arial';
     margin: 0;
 }
 
@@ -178,7 +178,7 @@ li {
 }
 
 .index_about_pic {
-    width: 1000px;
+    width: 900px;
     height: 667px;
     display: flex;
     justify-content: center;
@@ -199,6 +199,7 @@ li {
     color: #e0e0e0;
     align-self: center;
     padding-top: 35%;
+    padding-left: 2.5%;
 
 }
 
@@ -217,14 +218,15 @@ li {
     background-color: #717193; 
     display: flex; 
     align-items: center;
-    justify-content: center; 
+    justify-content: space-around; 
     flex-direction: column;
 }
 
 .index_content h2 {
     color: white;
     font-size: x-large;
-    padding-bottom: 25px;
+    padding-bottom: 45px;
+    padding-top: 25px;
     text-align: center;
 }
 
@@ -236,6 +238,10 @@ li {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+}
+
+.index_content_row li {
+    width: 300px;
 }
 
 .checkmark {
@@ -250,7 +256,7 @@ li {
 .fade_line {
     height: 1px;
     background-color: #E6E6E6;
-    width: 80.0em;
+    width: 50.0em;
     margin: 25px auto;
     background-image: -webkit-gradient( linear, left bottom, right bottom, color-stop(0.02, #dddddd), color-stop(0.5, #717193), color-stop(0.98, #dddddd));
 }
@@ -305,4 +311,9 @@ li {
     80% { -webkit-transform: translate(-1px, -1px) rotate(1deg); }
     90% { -webkit-transform: translate(2px, 2px) rotate(0deg); }
     100% { -webkit-transform: translate(1px, -2px) }
+}
+
+.spitztype_maincontent {
+    margin: 5%;
+    font-size: 20px;
 }
