@@ -30,6 +30,11 @@
     {% endblock%}
 </main>
 
+<div style="display: flex; justify-content: center; align-items: center;">
+    {% get_session_counter as ctr %}
+    <p>Счётчик пользователей: {{ctr}}</p>
+</div>
+
 {% random_fact as fact %}
 <div class="fact_section"> 
     <div class="fact_section_title">

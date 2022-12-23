@@ -2,21 +2,21 @@ User-agent: *
 Disallow:/
 Crawl-delay: 5
 Disallow: /cgi-bin/
-Sitemap: 7c0d-178-72-78-131.ngrok.io/sitemap.xml
+Sitemap: d9ec-178-178-89-170.ngrok.io/sitemap.xml
 
 User-agent: Yandex
 Disallow: /cgi-bin
 Disallow: */css
 Disallow: /images/
 Disallow: /admin/
-Host: 7c0d-178-72-78-131.ngrok.io
+Host: d9ec-178-178-89-170.ngrok.io
 
 User-agent: Googlebot
 Disallow: /cgi-bin
 Disallow: /images/
 Disallow: /admin/
 Allow: *.css
-Host: 7c0d-178-72-78-131.ngrok.io
+Host: d9ec-178-178-89-170.ngrok.io
 
 User-agent: Slurp
 Disallow: /

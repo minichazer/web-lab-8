@@ -7,6 +7,12 @@ from .models import *
 import pathlib
 from mysite.settings import BASE_DIR
 
+from django.shortcuts import render, redirect
+from django.contrib.auth import login, authenticate
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
+
+
 f_robots = pathlib.Path(f'{BASE_DIR}/spitz/templates/robots.txt').read_text()
 f_sitemap = pathlib.Path(f'{BASE_DIR}/spitz/templates/sitemap.xml').read_text()
 
@@ -52,8 +58,8 @@ def types(request):
     }
     return render(request, "types.html", context=context)
 
-def login(request):
-    return HttpResponse("Авторизация")
+# def login(request):
+#     return HttpResponse("Авторизация")
 
 def show_type(request, type_id):
     spitz_type = TypesSpitz.objects.filter(pk=type_id)
@@ -72,3 +78,23 @@ def robots(request):
 
 def sitemaps(request):
     return HttpResponse(f_sitemap, content_type="text/xml")
+
+
+
+@login_required
+def home(request):
+    return render(request, "success.html", {})
+ 
+def register(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username = username, password = password)
+            login(request, user)
+            return redirect('home')
+    else:
+        form = UserCreationForm()
+    return render(request, 'register.html', {'form': form})

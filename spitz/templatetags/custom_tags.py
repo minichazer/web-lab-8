@@ -1,5 +1,6 @@
 from django import template
 import random
+from django.contrib.sessions.models import Session
 
 register = template.Library()
 
@@ -28,3 +29,7 @@ def random_fact():
         "С тонущего «Титаника» спаслось всего 3 собаки, и две из них – были именно шпицы (они принадлежали Ротшильдам)."
     ]
     return random.choice(lst)
+
+@register.simple_tag
+def get_session_counter():
+    return len(Session.objects.all())

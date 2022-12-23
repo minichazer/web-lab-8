@@ -26,6 +26,13 @@ INSTALLED_APPS = [
     "spitz.apps.SpitzConfig",
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "127.0.0.1",
+    "https://d9ec-178-178-89-170.ngrok.io",
+    "http://d9ec-178-178-89-170.ngrok.io",
+    "d9ec-178-178-89-170.ngrok.io"
+]
+
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
@@ -117,3 +124,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/login/'
